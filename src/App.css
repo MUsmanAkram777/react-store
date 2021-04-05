@@ -1,38 +1,213 @@
-.App {
+:root {
+  --mainYellow: #f0ec3e;
+  --mainBlack: #280b3c;
+  --mainPurple: #711182;
+  --mainPink: #fa63a6;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--mainBlack) !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--mainYellow);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mainYellow);
+}
+.navbar.bg-dark {
+  background-color: #111 !important;
+}
+.brandColor {
+  color: var(--mainYellow) !important;
+  font-weight: 800;
+  font-size: 35px;
+}
+.bodyClass > .container {
+  padding: 20px 23px !important;
+}
+.navnav {
+  margin-top: 17px;
+}
+.nav-item {
+  color: #fff !important;
+  display: inline-block;
+  position: relative;
+}
+.nav-item.active {
+  color: var(--mainYellow) !important;
+}
+.nav-item:hover {
+  color: var(--mainYellow) !important;
+}
+.cartQuantity {
+  position: absolute;
+  background-color: var(--mainPink) !important;
+  font-size: 14px;
+  border-radius: 50%;
+  top: 2px;
+  width: 18px;
+  height: 18px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 1px;
+  right: -3px;
+}
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.breadcrumbs li {
+  display: inline-block;
+  padding: 0 10px 0 0;
+}
+.breadcrumbs li i {
+  font-size: 14px;
+  color: var(--mainPink);
+}
+.breadcrumbs li a {
+  font-size: 16px;
+  color: var(--mainPink);
+  text-decoration: none !important;
+}
+.breadcrumbs li.active a {
+  font-size: 18px !important;
+  font-weight: 600;
+}
+.btn-outline-success {
+  color: var(--mainYellow) !important;
+  border-color: var(--mainYellow) !important;
+}
+.btn-outline-success:hover {
+  background-color: var(--mainYellow) !important;
+  border-color: var(--mainYellow) !important;
+  color: #fff !important;
+}
+.sectionTitle {
+  text-align: center;
+  font-size: 35px;
+  margin: 35px 0 25px 0;
+  font-weight: 800;
+  color: var(--mainPurple);
+  text-transform: capitalize;
+  font-family: "Rock Salt", cursive !important;
+}
+.prodImgDiv {
+  overflow: hidden;
+  height: auto;
+}
+.prodImgDiv img {
+  transition: transform 0.8s ease !important;
+}
+.prodImgDiv:hover img {
+  transform: scale(1.2) !important;
+}
+.prodTitle {
+  font-weight: 600 !important;
 }
 
-.App-link {
-  color: #61dafb;
+.ratings i {
+  font-size: 16px;
+  color: var(--mainPink);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.strike-text {
+  color: red;
+  text-decoration: line-through;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 3px;
+  background-color: var(--mainPurple);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.spec-1 {
+  color: #938787;
+  font-size: 15px;
+}
+.para {
+  font-size: 16px;
+}
+.prodDetailsBtn {
+  background-color: var(--mainBlack);
+  color: #fff;
+  transition: all 0.5s ease-in;
+  border: var(--mainBlack) !important;
+  font-weight: 600;
+}
+.prodDetailsBtn:hover {
+  background-color: var(--mainPurple);
+  border: var(--mainPurple) !important;
+}
+.prodAddToCart {
+  background-color: transparent !important;
+  border-color: var(--mainPurple);
+  color: var(--mainPurple) !important;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+.prodAddToCart:hover {
+  color: #fff !important;
+  background-color: var(--mainPurple) !important;
+  border-color: var(--mainPurple) !important;
+}
+.btnsCount {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+  width: 20px;
+}
+.quantity {
+  width: 50px;
+  border-color: var(--mainBlack) !important;
+  border-radius: 5px;
+  font-size: 22px;
+  text-align: center;
+  padding: 5px 5px 3px 3px;
+}
+.trashCan {
+  font-size: 20px !important;
+  color: var(--mainBlack);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.trashCan:hover {
+  color: var(--mainYellow);
+}
+.myFooter {
+  background-color: #111;
+}
+.myFooter img {
+  width: 300px;
 }
